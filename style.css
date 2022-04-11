@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 16px;
+}
+
+.container {
+    padding: 20px;
+}
+
+table tr th, table tr td {
+    padding-right: 10px;
+}
+
+.submitbutton {
+    margin-top: 16px;
+    padding: 5px 20px 5px 20px;
+}
+
+.left {
+    float: left;
+    padding-right: 64px;
+}
+
+.right {
+    padding-top: 64px;
+}
+
+input, select {
+    padding-left: 16px;
+}
+
+.noselect {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}

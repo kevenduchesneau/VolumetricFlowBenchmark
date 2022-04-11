@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <script src="https://unpkg.com/javascript-lp-solver/prod/solver.js"></script>
+    <script src="app.js"></script>
+    <section class="container">
+        <div class="left">
+            <form>
+                <table>
+                    <tr>
+                        <th>General settings</th>
+                        <th></th>
+                    </tr>
+
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td>Bed size x (mm)</td>
+                        <td><input type="number" id="bedSizeX" name="bedSizeX" value="235"></td>
+                    </tr>
+                    <tr>
+                        <td>Bed size y (mm)</td>
+                        <td><input type="number" id="bedSizeY" name="bedSizeY" value="235"></td>
+                    </tr>
+                    <tr>
+                        <td>Bed margin (mm)</td>
+                        <td><input type="number" id="bedMargin" name="bedMargin" value="20"></td>
+                    </tr>
+                    <tr>
+                        <td>Nozzle width (mm)</td>
+                        <td><input type="number" id="nozzleWidth" name="nozzleWidth" value="0.6" step="0.1" min="0.1"></td>
+                    </tr>
+
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td>Travel speed (mm/s)</td>
+                        <td><input type="number" id="travelSpeed" name="travelSpeed" value="120"></td>
+                    </tr>
+                    <tr>
+                        <td>Priming max flow rate (mm3)</td>
+                        <td><input type="number" id="primeFlowRate" name="primeFlowRate" value="6"></td>
+                    </tr>
+                    <tr>
+                        <td>Priming max speed (mm/s)</td>
+                        <td><input type="number" id="primeSpeed" name="primeSpeed" value="20"></td>
+                    </tr>
+                    <tr>
+                        <td>Bed temperature (C)</td>
+                        <td><input type="number" id="bedTemp" name="bedTemp" value="60"></td>
+                    </tr>
+
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td>Flow start value (mm3)</td>
+                        <td><input type="number" id="flowStart" name="flowStart" value="6"></td>
+                    </tr>
+                    <tr>
+                        <td>Flow end value (mm3)</td>
+                        <td><input type="number" id="flowEnd" name="flowStart" value="16"></td>
+                    </tr>
+                    <tr>
+                        <td>Flow steps</td>
+                        <td><input type="number" id="flowSteps" name="flowSteps" value="6"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>If set to 1, start flow value is used</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td>Flow filament length (mm)</td>
+                        <td><input type="number" id="flowLength" name="flowLength" value="100"></td>
+                    </tr>
+                    <tr>
+                        <td>Flow test order</td>
+                        <td>
+                            <input type="radio" id="flowDirectionFB" name="flowDirection" checked>
+                            <label for="flowDirectionFB">Front to back</label><br>
+                            <input type="radio" id="flowDirectionBF" name="flowDirection">
+                            <label for="flowDirectionBF">Back to front</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td>Temperature start value (C)</td>
+                        <td><input type="number" id="tempStart" name="tempStart" value="235"></td>
+                    </tr>
+                    <tr>
+                        <td>Temperature end value (C)</td>
+                        <td><input type="number" id="tempEnd" name="tempEnd" value="255"></td>
+                    </tr>
+                    <tr>
+                        <td>Temperature steps</td>
+                        <td><input type="number" id="tempSteps" name="tempSteps" value="3"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>If set to 1, end temperature is used</td>
+                    </tr>
+
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td><input class="submitbutton" type="button" onclick="mainFunction()" value="Generate GCode"></td>
+                        <td>­­<span id="showResultCopyText"></span></td>
+                    </tr>
+
+                </table>
+                &nbsp;
+            </form>
+        </div>
+        ­­<p id="showResult"></p>
+    </section>
+</body>
+
+</html>
